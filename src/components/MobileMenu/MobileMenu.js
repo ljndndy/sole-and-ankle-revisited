@@ -43,7 +43,7 @@ const MobileMenu = ({ isOpen, onDismiss }) => {
 };
 
 const Overlay = styled(DialogOverlay)`
-  background: hsl(220deg 5% 40% / 0.8);
+  background: hsl(var(--color-values-gray-700) / 0.8);
   position: fixed;
   top: 0;
   right: 0;
@@ -54,7 +54,7 @@ const Overlay = styled(DialogOverlay)`
 `;
 
 const Content = styled(DialogContent)`
-  background: ${COLORS.white};
+  background: var(--color-white);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -78,11 +78,11 @@ const NavLink = styled.a`
   font-size: 1.125rem;
   text-transform: uppercase;
   text-decoration: none;
-  color: ${COLORS.gray[900]};
+  color: var(--color-gray-900);
   font-weight: ${WEIGHTS.medium};
 
   &:first-of-type {
-    color: ${COLORS.secondary};
+    color: var(--color-secondary);
   }
 `;
 
@@ -94,7 +94,7 @@ const Footer = styled.footer`
 
 const FooterLink = styled.a`
   font-size: 0.875rem;
-  color: ${COLORS.gray[700]};
+  color: var(--color-gray-700);
   text-decoration: none;
 `;
 
