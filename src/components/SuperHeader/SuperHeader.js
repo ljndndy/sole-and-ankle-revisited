@@ -9,16 +9,19 @@ import Icon from '../Icon';
 
 const SuperHeader = () => {
   return (
-    <Wrapper>
-      <MarketingMessage>
-        Free shipping on domestic orders over $75!
-      </MarketingMessage>
-      <SearchInput />
-      <HelpLink href="/help">Help</HelpLink>
-      <UnstyledButton>
-        <Icon id="shopping-bag" strokeWidth={1} />
-      </UnstyledButton>
-    </Wrapper>
+    <>
+      <Wrapper>
+        <MarketingMessage>
+          Free shipping on domestic orders over $75!
+        </MarketingMessage>
+        <SearchInput />
+        <HelpLink href="/help">Help</HelpLink>
+        <UnstyledButton>
+          <Icon id="shopping-bag" strokeWidth={1} />
+        </UnstyledButton>
+      </Wrapper>
+      <MobileLine />
+    </>
   );
 };
 
@@ -32,6 +35,21 @@ const Wrapper = styled.div`
   height: 40px;
   padding-left: 32px;
   padding-right: 32px;
+
+  @media ${props => props.theme.queries.tablet} {
+    display: none;
+  } 
+`;
+
+const MobileLine = styled.div`
+  display: none;
+  
+  @media ${props => props.theme.queries.tablet} {
+      display: revert;
+      height: 4px;
+      background-color: ${COLORS.gray[900]};
+    } 
+
 `;
 
 const MarketingMessage = styled.span`
