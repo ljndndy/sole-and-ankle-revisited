@@ -25,11 +25,11 @@ const Header = () => {
           <Logo />
         </Side>
         <Nav>
-          <NavLink href="/sale">Sale</NavLink>
-          <NavLink href="/new">New&nbsp;Releases</NavLink>
-          <NavLink href="/men">Men</NavLink>
-          <NavLink href="/women">Women</NavLink>
-          <NavLink href="/kids">Kids</NavLink>
+          <NavLink href="/sale">A&nbsp;Vendre</NavLink>
+          <NavLink href="/new">Nouvelles&nbsp;Versions</NavLink>
+          <NavLink href="/men">Hommes</NavLink>
+          <NavLink href="/women">Femmes</NavLink>
+          <NavLink href="/kids">Les&nbsp;Enfants</NavLink>
           <NavLink href="/collections">Collections</NavLink>
         </Nav>
         <Side>
@@ -73,7 +73,11 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 48px;
+  gap: clamp(
+    1rem,
+    10.5vw - 5.25rem,
+    3rem
+  );
   margin: 0px 48px;
 
   @media ${props => props.theme.queries.tablet} {
